@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="shotcut icon" href="assets/favicon.ico">
+
+    <style>
+       body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transition: background-color 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted id="intro-video">
+        <source src="assets/spider.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <div id="overlay"></div> <!-- Overlay branco -->
+
+    <script>
+        const video = document.getElementById('intro-video');
+        const overlay = document.getElementById('overlay');
+
+        // Tempo para começar a exibir o overlay antes do final do vídeo
+        const overlayStartTime = 1; // em segundos (ajuste conforme necessário)
+
+        video.addEventListener('timeupdate', () => {
+            // Se o tempo atual do vídeo for o tempo de início do overlay, comece a transição
+            if (video.duration - video.currentTime <= overlayStartTime) {
+                overlay.style.opacity = '1'; // Torna o overlay visível
+            }
+        });
+
+        video.addEventListener('ended', () => {
+            console.log('Vídeo terminado'); // Log para verificar se o evento está sendo chamado
+            setTimeout(() => {
+                window.location.href = 'index2.html'; // Redireciona para a outra página após 1 segundo
+            }, 200); // Tempo para o redirecionamento
+        });
+    </script>
+</body>
+</html>

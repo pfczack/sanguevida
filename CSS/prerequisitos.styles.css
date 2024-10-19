@@ -1,0 +1,262 @@
+/* Estilização da página de tipos sanguíneos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(45deg, rgba(0, 0, 202, 0.726), rgba(0, 0, 202, 0.726), rgba(41, 41, 41, 0.918));
+    background-position: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+header {
+    background-image: linear-gradient(90deg, rgba(161, 0, 0, 0.8), rgba(230, 0, 0, 0.9), rgba(255, 117, 117, 0.9));
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    position: relative; 
+    z-index: 100;
+}
+
+header .logo img {
+    height: 80px; 
+    width: auto; 
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+header .logo img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+}
+
+header .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; 
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em; 
+    font-weight: bold;
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+header .nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); 
+}
+
+.nav-mobile{
+    cursor: pointer;
+    display: none;
+}
+
+.nav-mobile div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.nav-list.active{
+    transform: translateX(0);
+    background-color: #333333e7;
+}
+
+.mobile-menu.active .line1{    
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{    
+    opacity: 0;
+}
+.mobile-menu.active .line3{    
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@media (max-width: 850px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 30vh;
+        background: rgba(82, 82, 82, 0.01);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-radius: 20px;
+    }    
+
+    .nav-list li {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        font-weight: bolder;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    .nav-mobile{
+        display: block;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
+    }
+}
+
+.requisitos {
+    background-image: linear-gradient(10deg, rgb(161, 0, 0), rgb(230, 0, 0), rgb(255, 117, 117));
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3); 
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 50px auto;
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1.5s ease forwards; 
+}
+
+.requisitos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.requisitos p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.requisitos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+.requisitos ul {
+    list-style-type: none;
+    font-size: 1.2em;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.requisitos ul li {
+    margin-bottom: 10px;
+}
+
+.tipos-sanguineos {
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.tipos-sanguineos h2{
+    margin: 30px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-tipo {
+    background-color: rgb(184, 1, 1);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 7px 7px black;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card-tipo:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 25px 25px rgba(194, 0, 0, 0.5);
+}
+
+.card-tipo h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card-tipo p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: rgba(68, 68, 68, 0.795);
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

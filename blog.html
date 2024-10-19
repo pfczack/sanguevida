@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de upload</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/blog.styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logosite.jpeg" alt="logo">
+        </div>
+        
+        <div class="nav-mobile mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="index2.html">Início</a></li>
+                <li><a href="curiosidades.html">Curiosidades</a></li>
+                <li><a href="localizacao.html">Onde doar</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <form method="post" autocomplete="on" class="form" id="donationReg">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="itiposang">Tipo sanguíneo: </label>
+            <input type="text" name="tiposang" id="itiposang" list="lsttiposang" placeholder=" Tipo sanguíneo">
+            <datalist id="lsttiposang">
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB-</option>
+                <option>AB+</option>
+                <option>O+</option>
+                <option>O-</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="ifoto">Quer registrar uma foto? </label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+        <p>
+            <label for="imsg">Digite sua mensagem </label>
+            <textarea type="msg" name="msg" id="imsg"></textarea>
+            
+        </p>
+        <p>
+            <input type="submit" value="enviar" class="botao">
+            <input type="reset" value="limpar" class="botao">
+        </p>
+
+        <div id="articles"></div>
+
+    </form>
+    <script src="JS/script.js"></script>
+    <script src="JS/nav-mobile.js"></script>
+    <script src="JS/blog.js"></script>
+</body>
+<footer>
+    <p>&copy Desenvolvido por Isaac</p>
+</footer>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-requisitos para Doação de Sangue</title>
+    <link rel="stylesheet" href="CSS/prerequisitos.styles.css">
+    <link rel="shotcut icon" href="assets/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logosite.jpeg" alt="logo">
+        </div>
+
+        <div class="nav-mobile mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="index2.html" target="_self">Início</a></li>
+                <li><a href="curiosidades.html" target="_self">Curiosidades</a></li>
+                <li><a href="localizacao.html" target="_self">Onde doar</a></li>
+            </ul>
+        </div>
+    </header>
+
+        <section class="requisitos">
+            <h1>Pré-requisitos para Doação de Sangue</h1>
+            <p>Para doar sangue, é necessário atender aos seguintes critérios:</p>
+            <ul>
+                <li>Ter entre 16 e 69 anos (menores de idade com autorização dos responsáveis).</li>
+                <li>Pesar no mínimo 50 kg.</li>
+                <li>Estar em boas condições de saúde.</li>
+                <li>Estar descansado e alimentado (evitar alimentos gordurosos 3 horas antes da doação).</li>
+                <li>Não ter feito tatuagem ou piercing nos últimos 12 meses.</li>
+                <li>Não ter ingerido bebidas alcoólicas nas últimas 12 horas.</li>
+                <li>Outras condições podem ser avaliadas no momento da triagem médica.</li>
+            </ul>
+        </section>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <section class="tipos-sanguineos">
+            <h2>Tipos Sanguíneos e Compatibilidade</h2>
+            <div class="grid">
+                <div class="card-tipo">
+                    <h3>Tipo O-</h3>
+                    <p>Doador universal: pode doar para todos os tipos sanguíneos.</p>
+                    <p>Receptor: só pode receber de O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo O+</h3>
+                    <p>Pode doar para O+, A+, B+ e AB+.</p>
+                    <p>Receptor: pode receber de O+ e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo A-</h3>
+                    <p>Pode doar para A-, A+, AB- e AB+.</p>
+                    <p>Receptor: pode receber de A- e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo A+</h3>
+                    <p>Pode doar para A+ e AB+.</p>
+                    <p>Receptor: pode receber de A+, A-, O+ e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo B-</h3>
+                    <p>Pode doar para B-, B+, AB- e AB+.</p>
+                    <p>Receptor: pode receber de B- e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo B+</h3>
+                    <p>Pode doar para B+ e AB+.</p>
+                    <p>Receptor: pode receber de B+, B-, O+ e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo AB-</h3>
+                    <p>Pode doar para AB- e AB+.</p>
+                    <p>Receptor: pode receber de AB-, A-, B- e O-.</p>
+                </div>
+                <div class="card-tipo">
+                    <h3>Tipo AB+</h3>
+                    <p>Receptor universal: pode receber de todos os tipos sanguíneos.</p>
+                    <p>Pode doar apenas para AB+.</p>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <p>&copy Desenvolvido por Isaac</p>
+    </footer>
+
+    <script src="JS/nav-mobile.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>

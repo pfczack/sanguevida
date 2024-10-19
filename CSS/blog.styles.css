@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(45deg, rgba(0, 0, 202, 0.726), rgba(0, 0, 202, 0.726), rgba(41, 41, 41, 0.918));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: linear-gradient(90deg, rgba(161, 0, 0, 0.8), rgba(230, 0, 0, 0.9), rgba(255, 117, 117, 0.9));
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    position: relative; 
+    z-index: 100;
+}
+
+header .logo img {
+    height: 80px; 
+    width: auto; 
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+header .logo img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+}
+
+header .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; 
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em; 
+    font-weight: bold;
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+header .nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); 
+}
+
+.nav-mobile{
+    cursor: pointer;
+    display: none;
+}
+
+.nav-mobile div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+.nav-mobile.active .line1 {    
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.nav-mobile.active .line2 {    
+    opacity: 0;
+}
+
+.nav-mobile.active .line3 {    
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.form {
+    max-width: 1000vw;
+    max-height: 75vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: block;
+    position: fixed;
+    overflow-y: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+.form textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#articles {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+
+.article {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.article:hover {
+    transform: scale(1.02);
+}
+
+
+.article img {
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 5px;
+    max-width: 100%; 
+    height: auto;
+}
+
+.article h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.article p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    margin: 20px;
+}
+
+.botao {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 850px) {
+    .nav-list{
+            position: absolute;
+            top: 8vh;
+            right: 0;
+            width: 40vw;
+            height: 30vh;
+            background: rgba(82, 82, 82, 0.01);
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+            border-radius: 20px;
+        }    
+    
+        .nav-list li {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            font-weight: bolder;
+            text-shadow: 2px 2px 2px black;
+        }
+    
+        .nav-mobile{
+            display: block;
+        }
+    
+        .logo{
+            display: none;
+        }
+    
+        .nav-list.active{
+            transform: translateX(0);
+            background-color: #333333e7;
+        }
+    }
+
+    footer {
+        background-color: rgba(68, 68, 68, 0.795);
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 10;
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    }
